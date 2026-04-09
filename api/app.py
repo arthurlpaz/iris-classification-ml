@@ -26,12 +26,17 @@ class IrisInput(BaseModel):
 
 @app.post("/predict")
 def predict(data: IrisInput):
-    df = pd.DataFrame([[
-        data.sepal_length,
-        data.sepal_width,
-        data.petal_length,
-        data.petal_width,
-    ]], columns=FEATURE_NAMES)
+    df = pd.DataFrame(
+        [
+            [
+                data.sepal_length,
+                data.sepal_width,
+                data.petal_length,
+                data.petal_width,
+            ]
+        ],
+        columns=FEATURE_NAMES,
+    )
 
     pred = model.predict(df)[0]
     probs = model.predict_proba(df)[0]
@@ -39,5 +44,5 @@ def predict(data: IrisInput):
     return {
         "prediction": int(pred),
         "class": CLASS_NAMES[pred],
-        "confidence": float(max(probs))
+        "confidence": float(max(probs)),
     }

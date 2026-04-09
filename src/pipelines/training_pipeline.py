@@ -6,6 +6,7 @@ from src.models.evaluate import evaluate_model
 from src.models.save_model import save_model
 import yaml
 
+
 def run_pipeline():
     configs = yaml.safe_load(open("configs/config.yaml"))
 
@@ -13,9 +14,10 @@ def run_pipeline():
     X, y = preprocess_data(df)
 
     X_train, X_test, y_train, y_test = train_test_split(
-        X, y,
+        X,
+        y,
         test_size=configs["data"]["test_size"],
-        random_state=configs["data"]["random_state"]
+        random_state=configs["data"]["random_state"],
     )
 
     model = train_model(X_train, y_train, configs)
@@ -30,5 +32,3 @@ def run_pipeline():
     print(f"Cross-Validation Scores: {cv_scores}")
 
     save_model(model)
-
-

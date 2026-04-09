@@ -23,11 +23,10 @@ def predict(features):
     pred = model.predict(df)[0]
     probs = model.predict_proba(df)[0]
 
-
     return {
         "prediction": int(pred),
         "class": CLASS_NAMES[pred],
-        "confidence": float(max(probs))
+        "confidence": float(max(probs)),
     }
 
 
