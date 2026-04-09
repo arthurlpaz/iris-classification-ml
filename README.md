@@ -81,6 +81,81 @@ python predict.py
 
 ---
 
+## 🌐 API Usage
+
+Start server:
+
+```
+uvicorn api.app:app --reload
+```
+
+Open:
+
+```
+http://127.0.0.1:8000/docs
+```
+
+---
+
+## 🧠 MLflow Tracking
+
+Start MLflow UI:
+
+```
+mlflow ui
+```
+
+Track:
+
+* Parameters
+* Metrics
+* Model versions
+
+---
+
+## 🐳 Docker
+
+Build:
+
+```
+docker build -t iris-api .
+```
+
+Run:
+
+```
+docker run -p 8000:8000 iris-api
+```
+
+---
+
+## 🧪 Tests
+
+```
+pytest
+```
+
+---
+
+## 💡 Key Highlights
+
+* Modular ML pipeline
+* Config-driven training
+* Experiment tracking with MLflow
+* REST API for inference
+* Dockerized deployment
+
+---
+
+## 📈 Future Improvements
+
+* CI/CD with GitHub Actions
+* Deployment on AWS
+* Data validation (Great Expectations)
+* Feature pipelines with sklearn Pipeline
+
+---
+
 ## 👤 Author
 
 Arthur Lincoln da Paz Cristovao
