@@ -147,15 +147,6 @@ pytest
 
 ---
 
-## 📈 Future Improvements
-
-* CI/CD with GitHub Actions
-* Deployment on AWS
-* Data validation (Great Expectations)
-* Feature pipelines with sklearn Pipeline
-
----
-
 ## 👤 Author
 
 Arthur Lincoln da Paz Cristovao
