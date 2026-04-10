@@ -132,7 +132,7 @@ docker run -p 8000:8000 iris-api
 ## 🧪 Tests
 
 ```
-pytest
+python -m pytest tests/
 ```
 
 ---
