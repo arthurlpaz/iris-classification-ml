@@ -137,6 +137,12 @@ python -m pytest tests/
 
 ---
 
+## Quick Start
+
+```bash
+make run
+```
+
 ## 💡 Key Highlights
 
 * Modular ML pipeline
